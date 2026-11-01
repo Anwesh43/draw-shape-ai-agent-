@@ -24,10 +24,21 @@ def drawPoints(points : List[Point], color : str):
     print(f"Calling drawPoints with {len(points)} size")
     return ds.drawPoints(points=points, color=color)
 
-def drawPolygons(polygonPoints : List[Point], fillColor : str, outlineColor : str, outlineWidth : int = 3):
+def drawPolygon(polygonPoints : List[Point], fillColor : str, outlineColor : str, outlineWidth : int = 3):
     print(f"Calling drawPolygons tool with {len(polygonPoints)}")
     return ds.drawPolygons(polygonPoints=polygonPoints, fillColor=fillColor, outlineColor=outlineColor, outlineWidth=outlineWidth)
 
 def saveImage(fileName : str):
     print(f"Calling saveImage tool with {fileName}")
     return ds.save(fileName=fileName)
+
+def getTools():
+    tools = []
+    tools.append(drawRectangle)
+    tools.append(drawLine)
+    tools.append(drawArc)
+    tools.append(drawCircle)
+    tools.append(drawPoints)
+    tools.append(drawPolygon)
+    tools.append(saveImage)
+    return tools 
