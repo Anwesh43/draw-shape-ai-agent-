@@ -8,7 +8,7 @@ class DrawingService:
         self.draw = ImageDraw.Draw(self.img)
 
     def drawRectangle(self, left : int, top : int, right: int, bottom: int, fillColor : str, outlineColor : str):
-        self.draw.rectangle([left, top, right, bottom], fill= fillColor, outlineColor = outlineColor, width=3)
+        self.draw.rectangle([left, top, right, bottom], fill= fillColor, outline = outlineColor, width=3)
         return self._successResponse()
 
     def save(self, fileName : str):

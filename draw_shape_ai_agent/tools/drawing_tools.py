@@ -2,7 +2,7 @@ from services.drawing_service import DrawingService
 from typing import List 
 from models.point import Point 
 
-ds = DrawingService()
+ds = DrawingService(w = 500, h = 500)
 
 def drawRectangle(left : int, top : int, right: int, bottom : int, fillColor : str, outlineColor : str):
     print(f"Calling drawRectangle tool {left} {top} {right} {bottom}")
