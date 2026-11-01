@@ -32,6 +32,15 @@ def saveImage(fileName : str):
     print(f"Calling saveImage tool with {fileName}")
     return ds.save(fileName=fileName)
 
+def writeHTML(htmlStr : str, fileName : str):
+    print(f"calling writeHTML tool to {fileName}")
+    with open(fileName, "w") as f:
+        f.write(htmlStr)
+    return {
+        "status": "success",
+        "message": f"html written to {fileName}"
+    }
+
 def getTools():
     tools = []
     tools.append(drawRectangle)
@@ -41,4 +50,5 @@ def getTools():
     tools.append(drawPoints)
     tools.append(drawPolygon)
     tools.append(saveImage)
+    tools.append(writeHTML)
     return tools 
